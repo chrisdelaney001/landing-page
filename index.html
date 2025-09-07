@@ -167,52 +167,6 @@
             margin-right: 8px;
             color: #4CAF50;
         }
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background-color: var(--light-color);
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        .section-title p {
-            color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .feature-card {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        .feature-card i {
-            font-size: 3rem;
-            color: var(--secondary-color);
-            margin-bottom: 20px;
-        }
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
         /* Survey Section */
         .survey {
             padding: 80px 0;
@@ -323,6 +277,52 @@
             border: 1px solid var(--light-gray);
         }
         .consent-section h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        .feature-card h3 {
+            font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--primary-color);
         }
@@ -735,44 +735,6 @@
             <a href="#features" class="btn btn-outline">Explore Features</a>
         </div>
     </section>
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Choose Us?</h2>
-                <p>Our platform is designed with the student in mind, offering cutting-edge features to enhance your
-                    learning experience.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Performance Analytics</h3>
-                    <p>Track your progress with detailed analytics and identify areas that need improvement.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Comprehensive Content</h3>
-                    <p>Access extensive study materials, video lectures, and practice tests covering the entire
-                        syllabus.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-comments"></i>
-                    <h3>Doubt Resolution</h3>
-                    <p>Get instant answers to your questions with our instant doubt resolution system.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Peer Learning</h3>
-                    <p>Connect with fellow aspirants, share knowledge, and learn collaboratively.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Learn Anywhere</h3>
-                    <p>Access our platform on any device, anytime, and continue learning without interruption.</p>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Survey Section -->
     <section id="survey" class="survey">
         <div class="container">
@@ -786,23 +748,6 @@
                     <i class="fas fa-check-circle"></i> Thank you for joining our waitlist! Redirecting to download page...
                 </div>
                 <form id="surveyForm">
-                    <div class="form-group">
-                        <label for="name">Full Name <span style="color: var(--accent-color);">*</span></label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address <span style="color: var(--accent-color);">*</span></label>
-                        <input type="email" id="email" name="email" class="form-control" required
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                        <div id="emailError" class="error-message">Please enter a valid email address</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="mobile">Mobile Number <span class="optional">(Optional-Provide for Free
-                                Notes)</span></label>
-                        <input type="tel" id="mobile" name="mobile" class="form-control"
-                            placeholder="Enter your 10-digit mobile number" pattern="[6-9]{1}[0-9]{9}">
-                        <div id="mobileError" class="error-message">Please enter a valid 10-digit mobile number</div>
-                    </div>
                     <div class="form-group">
                         <label for="exam">Which exam are you preparing for? <span
                                 style="color: var(--accent-color);">*</span></label>
@@ -905,6 +850,17 @@
                         <textarea id="challenges" name="challenges" class="form-control"
                             placeholder="Please describe your challenges..." required></textarea>
                     </div>
+                    <!-- Moved name and email fields to the end and made them optional -->
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="optional">(Optional)</span></label>
+                        <input type="text" id="name" name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="optional">(Optional)</span></label>
+                        <input type="email" id="email" name="email" class="form-control"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        <div id="emailError" class="error-message">Please enter a valid email address</div>
+                    </div>
                     <div class="consent-section">
                         <h4>Data Consent & Privacy</h4>
                         <div class="checkbox-item">
@@ -924,6 +880,45 @@
                         <span id="submitSpinner" class="spinner"></span>
                     </button>
                 </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section (Moved below the form) -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Us?</h2>
+                <p>Our platform is designed with the student in mind, offering cutting-edge features to enhance your
+                    learning experience.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Performance Analytics</h3>
+                    <p>Track your progress with detailed analytics and identify areas that need improvement.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Comprehensive Content</h3>
+                    <p>Access extensive study materials, video lectures, and practice tests covering the entire
+                        syllabus.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Doubt Resolution</h3>
+                    <p>Get instant answers to your questions with our instant doubt resolution system.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Peer Learning</h3>
+                    <p>Connect with fellow aspirants, share knowledge, and learn collaboratively.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Learn Anywhere</h3>
+                    <p>Access our platform on any device, anytime, and continue learning without interruption.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1087,31 +1082,17 @@
         
         // Form validation
         const emailInput = document.getElementById('email');
-        const mobileInput = document.getElementById('mobile');
         const emailError = document.getElementById('emailError');
-        const mobileError = document.getElementById('mobileError');
         
-        // Email validation on blur
+        // Email validation on blur (only if email is provided)
         emailInput.addEventListener('blur', function () {
             const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-            if (!emailPattern.test(emailInput.value) && emailInput.value !== '') {
+            if (emailInput.value !== '' && !emailPattern.test(emailInput.value)) {
                 emailInput.classList.add('error');
                 emailError.style.display = 'block';
             } else {
                 emailInput.classList.remove('error');
                 emailError.style.display = 'none';
-            }
-        });
-        
-        // Mobile validation on blur
-        mobileInput.addEventListener('blur', function () {
-            const mobilePattern = /^[6-9]{1}[0-9]{9}$/;
-            if (!mobilePattern.test(mobileInput.value) && mobileInput.value !== '') {
-                mobileInput.classList.add('error');
-                mobileError.style.display = 'block';
-            } else {
-                mobileInput.classList.remove('error');
-                mobileError.style.display = 'none';
             }
         });
         
@@ -1126,27 +1107,17 @@
         surveyForm.addEventListener('submit', function (e) {
             e.preventDefault();
             
-            // Validate email and mobile before submission
+            // Validate email only if provided (optional field)
             const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-            const mobilePattern = /^[6-9]{1}[0-9]{9}$/;
             let isValid = true;
             
-            if (!emailPattern.test(emailInput.value)) {
+            if (emailInput.value !== '' && !emailPattern.test(emailInput.value)) {
                 emailInput.classList.add('error');
                 emailError.style.display = 'block';
                 isValid = false;
             } else {
                 emailInput.classList.remove('error');
                 emailError.style.display = 'none';
-            }
-            
-            if (mobileInput.value !== '' && !mobilePattern.test(mobileInput.value)) {
-                mobileInput.classList.add('error');
-                mobileError.style.display = 'block';
-                isValid = false;
-            } else {
-                mobileInput.classList.remove('error');
-                mobileError.style.display = 'none';
             }
             
             if (!isValid) {
