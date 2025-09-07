@@ -850,17 +850,6 @@
                         <textarea id="challenges" name="challenges" class="form-control"
                             placeholder="Please describe your challenges..." required></textarea>
                     </div>
-                    <!-- Moved name and email fields to the end and made them optional -->
-                    <div class="form-group">
-                        <label for="name">Full Name <span class="optional">(Optional)</span></label>
-                        <input type="text" id="name" name="name" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="optional">(Optional)</span></label>
-                        <input type="email" id="email" name="email" class="form-control"
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                        <div id="emailError" class="error-message">Please enter a valid email address</div>
-                    </div>
                     <div class="consent-section">
                         <h4>Data Consent & Privacy</h4>
                         <div class="checkbox-item">
@@ -1080,22 +1069,6 @@
             pricingValue.textContent = this.value;
         });
         
-        // Form validation
-        const emailInput = document.getElementById('email');
-        const emailError = document.getElementById('emailError');
-        
-        // Email validation on blur (only if email is provided)
-        emailInput.addEventListener('blur', function () {
-            const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-            if (emailInput.value !== '' && !emailPattern.test(emailInput.value)) {
-                emailInput.classList.add('error');
-                emailError.style.display = 'block';
-            } else {
-                emailInput.classList.remove('error');
-                emailError.style.display = 'none';
-            }
-        });
-        
         // Form submission
         const surveyForm = document.getElementById('surveyForm');
         const successMessage = document.getElementById('successMessage');
@@ -1106,23 +1079,6 @@
         
         surveyForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
-            // Validate email only if provided (optional field)
-            const emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-            let isValid = true;
-            
-            if (emailInput.value !== '' && !emailPattern.test(emailInput.value)) {
-                emailInput.classList.add('error');
-                emailError.style.display = 'block';
-                isValid = false;
-            } else {
-                emailInput.classList.remove('error');
-                emailError.style.display = 'none';
-            }
-            
-            if (!isValid) {
-                return;
-            }
             
             // Show loading state
             submitBtnText.textContent = 'Submitting...';
